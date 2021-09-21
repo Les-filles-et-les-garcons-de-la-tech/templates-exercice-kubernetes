@@ -3,4 +3,4 @@ kind: ConfigMap
 metadata:
   name: frontend-configmap
 data:
-  BACK_URL: "http://XXX:30180"   # A remplir
+  BACK_URL: "http://__IP_NODE_:30180"   # A remplir

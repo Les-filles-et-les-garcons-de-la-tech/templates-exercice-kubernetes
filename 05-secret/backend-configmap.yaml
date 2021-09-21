@@ -4,5 +4,5 @@ metadata:
   name: backend-configmap
 data:
   BACKGROUND_COLOR: "#03bef1"
-  DB_ADDRESS: "mongo"          # A remplir
+  DB_ADDRESS: "mongo"
   DB_PORT: "27017"

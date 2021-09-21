@@ -3,8 +3,8 @@ kind: ConfigMap
 metadata:
   name: backend-configmap
 data:
-  BACKGROUND_COLOR: "#"
-  DB_ADDRESS: ""
-  DB_PORT: ""
-  DB_USERNAME: ""   # le même que dans la configmap db
-  DB_PASSWORD: ""   # le même que dans la configmap db
+  BACKGROUND_COLOR: "#"   # chercher colorpicker sur google
+  DB_ADDRESS: ""          # A remplir
+  DB_PORT: ""             # A remplir
+  DB_USERNAME: ""         # le même que dans la configmap db
+  DB_PASSWORD: ""         # le même que dans la configmap db

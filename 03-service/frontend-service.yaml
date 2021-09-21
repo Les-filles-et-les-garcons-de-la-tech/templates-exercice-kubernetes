@@ -5,7 +5,7 @@ metadata:
 spec:
   type: ###           # Doit être accessible depuis un noeud
   selector:
-    type: ###         # Même label que les pods du deployment
+    type: ###         # Même label que les pods dont il gère le trafic
   ports:
   - port: 81
     targetPort: 81
