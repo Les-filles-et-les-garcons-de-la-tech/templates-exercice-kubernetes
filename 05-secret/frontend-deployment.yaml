@@ -1,23 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: ###
+  name: angularapp
 spec:
   selector:
     matchLabels:
-      type: ###
+      type: frontend
   template:
     metadata:
       labels:
-        type: ###
+        type: frontend
     spec:
       containers:
-      - name: ###
-        image: ###
+      - name: frontend-container
+        image: yannisbourree/exo-front-angular:1.00
         imagePullPolicy: Always
         ports:
-        - containerPort: ###
+        - containerPort: 81
         envFrom:
           - configMapRef:
-              name: ###
-
+              name: frontend-configmap

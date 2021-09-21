@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: frontend-service
+spec:
+  type: ###           # Doit être accessible depuis un noeud
+  selector:
+    type: ###         # Même label que les pods du deployment
+  ports:
+  - port: 81
+    targetPort: 81
+    nodePort: 30181

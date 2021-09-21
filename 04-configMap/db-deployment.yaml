@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mongo-db
+spec:
+  selector:
+    matchLabels:
+      type: db
+  template:
+    metadata:
+      labels:
+        type: db
+    spec:
+      containers:
+      - name: mongo-db
+        image: mongo:5.0.3
+        ports:
+        - containerPort: 27017
+        envFrom: # utiliser envFrom pour injecter les clé/valeur en tant que var d'env
+          ###

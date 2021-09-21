@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mypod
+  labels:
+    name: mypod
+spec:
+  containers:
+      - name: webappcontainer
+        image: ###               # A remplir
+        imagePullPolicy: Always
+        ports:
+        - containerPort: ###     # A remplir
+        env:
+          - name: ###            # A remplir
+            value: "#"           # A remplir

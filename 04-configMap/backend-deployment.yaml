@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: webapp
+spec:
+  selector:
+    matchLabels:
+      type: backend
+  template:
+    metadata:
+      labels:
+        type: backend
+    spec:
+      containers:
+      - name: webappcontainer
+        image: yannisbourree/exo-webapp-dotnet:1.00
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 80
+        envFrom: # utiliser envFrom pour injecter les clé/valeur en tant que var d'env

@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: webapp
+spec:
+  selector:
+    matchLabels:
+      type: backend
+  template:
+    metadata:
+      labels:
+        type: backend
+    spec:
+      containers:
+      - name: webappcontainer
+        image: yannisbourree/exo-webapp-dotnet:1.00
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 80
+        env:
+          - name: BACKGROUND_COLOR
+            value: "#03bef1"
+          - name: DB_ADDRESS
+            value: "10.104.230.250"
+          - name: DB_PORT
+            value: "27017"
+          - name: DB_USERNAME
+            value: "root"
+          - name: DB_PASSWORD
+            value: "example"

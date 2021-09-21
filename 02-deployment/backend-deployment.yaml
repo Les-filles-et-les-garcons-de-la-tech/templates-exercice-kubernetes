@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: webapp
+spec:
+  replicas: ###                  # A remplir
+  selector:
+    matchLabels:
+      type: ###                  # A remplir
+  template:
+    metadata:
+      labels:
+        type: ###                # A remplir
+    spec:
+      containers:
+      - name: webappcontainer
+        image: yannisbourree/exo-webapp-dotnet:1.00
+        imagePullPolicy: Always
+        ports:
+        - containerPort: ###     # A remplir
+        env:
+          - name: BACKGROUND_COLOR
+            value: "#03bef1"

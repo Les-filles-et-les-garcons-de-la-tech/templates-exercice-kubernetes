@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: ###
+  name: webapp
 spec:
   selector:
     matchLabels:
-      type: ###
+      type: backend
   template:
     metadata:
       labels:
-        type: ###
+        type: backend
     spec:
       containers:
-      - name: ###
-        image: ###
+      - name: webappcontainer
+        image: yannisbourree/exo-webapp-dotnet:1.00
         imagePullPolicy: Always
         ports:
-        - containerPort: ###
+        - containerPort: 80
         envFrom:
         - secretRef:
             name: ###
