@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: ###
+data:
+  MONGO_INITDB_ROOT_USERNAME: ""
+  MONGO_INITDB_ROOT_PASSWORD: ""

@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ###
+spec:
+  selector:
+    matchLabels:
+      type: ###
+  template:
+    metadata:
+      labels:
+        type: ###
+    spec:
+      containers:
+      - name: ###
+        image: ###
+        imagePullPolicy: Always
+        ports:
+        - containerPort: ###
+        env:
+        - name: ###
+          value: ""
+
