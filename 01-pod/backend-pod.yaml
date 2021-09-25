@@ -6,7 +6,7 @@ metadata:
     name: mypod
 spec:
   containers:
-      - name: webappcontainer
+      - name: webapp-container
         image: ###               # A remplir
         imagePullPolicy: Always
         ports:

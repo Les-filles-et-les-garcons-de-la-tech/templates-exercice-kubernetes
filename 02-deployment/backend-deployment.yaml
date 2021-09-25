@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: webapp
+  name: webapp-<prenom>
 spec:
   replicas: ###                  # A remplir
   selector:
     matchLabels:
-      type: ###                  # A remplir
+      type: ###-<prenom>         # A remplir
   template:
     metadata:
       labels:
-        type: ###                # A remplir
+        type: ###-<prenom>       # A remplir
     spec:
       containers:
-      - name: webappcontainer
-        image: yannisbourree/exo-webapp-dotnet:1.00
+      - name: webapp-container
+        image: yannisbourree/exo-webapp-dotnet:1.0
         imagePullPolicy: Always
         ports:
         - containerPort: ###     # A remplir

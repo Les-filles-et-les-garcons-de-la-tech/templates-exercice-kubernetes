@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: backend-service
+  name: backend-service-<prenom>
 spec:
   type: NodePort
   selector:
-    type: backend
+    tiers: backend-<prenom>
   ports:
   - port: 80           # port exposé par le service
     targetPort: 80     # port ciblé du pod 
-    nodePort: 30180    # port exposé par tous les noeuds du cluster
+    nodePort: _PORT_BACKEND_    # port exposé par tous les noeuds du cluster

@@ -1,11 +1,11 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: mongo
+  name: mongo-<prenom>
 spec:
   type: ###          # Besoin d'être accessible que dans le cluster  
   selector:
-    type: ###        # Même label que les pods dont il gère le trafic
+    tiers: ###-<prenom>        # Même label que les pods dont il gère le trafic
   ports:
   - port: 27017
     targetPort: 27017

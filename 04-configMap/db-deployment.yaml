@@ -1,15 +1,15 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: mongo-db
+  name: mongo-db-<prenom>
 spec:
   selector:
     matchLabels:
-      type: db
+      tiers: db-<prenom>
   template:
     metadata:
       labels:
-        type: db
+        tiers: db-<prenom>
     spec:
       containers:
       - name: mongo-db

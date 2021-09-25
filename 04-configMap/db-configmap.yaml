@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: db-configmap
+  name: db-configmap-<prenom>
 data:
   MONGO_INITDB_ROOT_USERNAME: ""  # le même que dans la configmap backend
   MONGO_INITDB_ROOT_PASSWORD: ""  # le même que dans la configmap backend

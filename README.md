@@ -1,7 +1,12 @@
 # templates-exercice-kubernetes
 
+Exercice kubernetes pour les formations
+
 # A faire au début
 
-remplacer _IP_NODE__ ... par l'IP d'un Node Worker !
+Dans TOUT le dossier :
 
-helm upgrade --install mongo -f values-db.yaml ./exo-helm
+- Remplacer <prenom> par votre prenom
+- Remplacer_IP_NODE_ ... par l'IP d'un Node Worker !
+- Remplacer _PORT_BACKEND_ par un port entre 30100 et 30200 (coordnnez vous pour ne pas prendre les mêmes)
+- Remplacer _PORT_FRONTEND_ par un port entre 30100 et 30200 (coordnnez vous pour ne pas prendre les mêmes)
