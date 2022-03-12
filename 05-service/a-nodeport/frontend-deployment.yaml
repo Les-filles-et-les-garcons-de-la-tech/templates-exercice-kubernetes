@@ -7,11 +7,11 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      tiers: frontend
+      tiers: ###        # A remplir
   template:
     metadata:
       labels:
-        tiers: frontend
+        tiers: ###      # A remplir
     spec:
       containers:
       - name: frontend-container
@@ -21,5 +21,5 @@ spec:
         - containerPort: 81
         env:
         - name: BACK_URL
-          value: "http://_IP_NODE_:_PORT_FRONTEND_"
+          value: "http://_IP_NODE_:_PORT_BACKEND_"
 

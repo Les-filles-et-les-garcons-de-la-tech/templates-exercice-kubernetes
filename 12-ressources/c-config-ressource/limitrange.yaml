@@ -4,5 +4,4 @@ metadata:
   name: limitrange-<prenom>
   namespace: <prenom>
 spec:
-  limits:
   # Adapter aux requis

@@ -4,9 +4,9 @@ metadata:
   name: mongo
   namespace: <prenom>  
 spec:
-  type: ClusterIP
+  type: ###           # A remplir
   selector:
-    tiers: db
+    tiers: ###        # A remplir
   ports:
   - port: ###         # port exposé par le service
     targetPort: ###   # port ciblé du pod

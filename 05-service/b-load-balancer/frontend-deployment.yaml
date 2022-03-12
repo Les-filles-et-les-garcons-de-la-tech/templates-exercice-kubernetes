@@ -21,5 +21,5 @@ spec:
         - containerPort: 81
         env:
         - name: BACK_URL
-          value: "http://_IP_LB_BACK_"
+          value: "http://_EXTERNAL_IP_SVC_BACKEND_"
 

@@ -7,11 +7,11 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      tiers: backend
+      tiers: ###               # A remplir
   template:
     metadata:
       labels:
-        tiers: backend
+        tiers: ###             # A remplir
     spec:
       containers:
       - name: webapp-container

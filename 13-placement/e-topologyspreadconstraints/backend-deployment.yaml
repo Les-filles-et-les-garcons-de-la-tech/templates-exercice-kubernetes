@@ -24,18 +24,6 @@ spec:
         - secretRef:
             name: backend-secret
         - configMapRef:
-            name: backend-configmap
-        resources:
-          requests:
-            memory: "128Mi"
-            cpu: "50m"
-          limits:
-            memory: "128Mi"
-            cpu: "150m"             
+            name: backend-configmap         
       topologySpreadConstraints:
-      - maxSkew: 1                    # biais: nombre accepté de Pod inégalement ditribué (O <)
-        topologyKey: kubernetes.io/hostname # clé pour la répartition
-        whenUnsatisfiable: DoNotSchedule    # par défaut (autre option ScheduleAnyway)
-        labelSelector:                      # Définit sur quels Pods agir 
-          matchLabels:
-            tiers: backend
+      - # Définir pour répartir automatiquement sur chaque Node

@@ -3,6 +3,7 @@ kind: Deployment
 metadata:
   name: mongo-db
   namespace: <prenom>  
+spec:
   selector:
     matchLabels:
       tiers: db

@@ -4,10 +4,10 @@ metadata:
   name: backend-service
   namespace: <prenom>  
 spec:
-  type: NodePort
+  type: ###                  # A remplir
   selector:
-    tiers: backend
+    tiers: ###               # A remplir
   ports:
   - port: ###                # port exposé par le service
     targetPort: ###          # port ciblé du pod
-    nodePort: _PORT_BACKEND_ # port exposé par tous les noeuds du cluster
+    nodePort: _PORT_BACKEND_ # port exposé par TOUS les noeuds du cluster

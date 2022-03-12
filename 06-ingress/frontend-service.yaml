@@ -4,9 +4,10 @@ metadata:
   name: frontend-service
   namespace: <prenom>  
 spec:
-  type: ClusterIP
+  type: ###          # A remplir
   selector:
     tiers: frontend
   ports:
   - port: 80
     targetPort: 81
+  ###

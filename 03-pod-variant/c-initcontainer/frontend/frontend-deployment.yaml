@@ -27,5 +27,5 @@ spec:
         - containerPort: 81
         env:
         - name: BACK_URL
-          value: "http://_IP_NODE_:_PORT_BACKEND_"
+          value: "http://_IP_LB_INGR_CONTR_/<prenom>"
 
