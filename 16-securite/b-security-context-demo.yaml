@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: security-context-demo
+  namespace: <prenom>
+spec:
+  securityContext:
+    runAsUser: 1000   # user des process
+    runAsGroup: 3000  # group des process
+    fsGroup: 2000     # group des Volumes (File System)
+  volumes:
+  - name: sec-ctx-vol
+    emptyDir: {}      # temporaire partage entre containers
+  containers:
+  - name: sec-ctx-demo
+    image: busybox
+    command: [ "sh", "-c", "sleep 1h" ]
+    volumeMounts:
+    - name: sec-ctx-vol
+      mountPath: /data/demo
+    securityContext:
+      readOnlyRootFilesystem: false 
+      allowPrivilegeEscalation: false

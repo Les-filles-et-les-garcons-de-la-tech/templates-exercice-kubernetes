@@ -1,0 +1,17 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: backend-ingress
+  namespace: <prenom>  
+spec:
+  ingressClassName: nginx  # class de l'ingress controller
+  rules:
+  - http:
+      paths:
+      - path: ###          # path reconnu par cet ingress
+        pathType: Prefix
+        backend:
+          service:
+            name: ###      # nom du service cilbé
+            port:
+              number: ###  # port du service ciblé

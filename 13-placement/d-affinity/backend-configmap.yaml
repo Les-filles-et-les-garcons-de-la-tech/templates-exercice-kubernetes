@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: backend-configmap
+  namespace: <prenom>  
+data:
+  BACKGROUND_COLOR: "#03bef1"
+  DB_ADDRESS: "mongo"
+  DB_PORT: "27017"

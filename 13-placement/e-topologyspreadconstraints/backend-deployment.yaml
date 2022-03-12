@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend
+  namespace: <prenom>  
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      tiers: backend
+  template:
+    metadata:
+      labels:
+        tiers: backend
+        app: tutorial
+    spec:
+      containers:
+      - name: webapp-container
+        image: fgtech/backend-todolist:1.0
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 80
+        envFrom:
+        - secretRef:
+            name: backend-secret
+        - configMapRef:
+            name: backend-configmap
+        resources:
+          requests:
+            memory: "128Mi"
+            cpu: "50m"
+          limits:
+            memory: "128Mi"
+            cpu: "150m"             
+      topologySpreadConstraints:
+      - maxSkew: 1                    # biais: nombre accepté de Pod inégalement ditribué (O <)
+        topologyKey: kubernetes.io/hostname # clé pour la répartition
+        whenUnsatisfiable: DoNotSchedule    # par défaut (autre option ScheduleAnyway)
+        labelSelector:                      # Définit sur quels Pods agir 
+          matchLabels:
+            tiers: backend

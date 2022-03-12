@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend
+  namespace: <prenom>  
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      tiers: backend
+  template:
+    metadata:
+      labels:
+        tiers: backend
+    spec:
+      containers:
+      - name: webapp-container
+        image: fgtech/backend-todolist:1.0
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 80
+        envFrom: # utiliser envFrom pour injecter les clé/valeur en tant que var d'env
+          ###

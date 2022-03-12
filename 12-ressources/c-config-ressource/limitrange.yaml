@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: LimitRange
+metadata:
+  name: limitrange-<prenom>
+  namespace: <prenom>
+spec:
+  limits:
+  # Adapter aux requis

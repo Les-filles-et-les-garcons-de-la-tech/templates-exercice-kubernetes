@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend
+  namespace: formateur  
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      tiers: frontend
+  template:
+    metadata:
+      labels:
+        tiers: frontend
+    spec:
+      initContainers:
+      - name: init-frontend
+        image: busybox:1.28
+        command: ['sh', '-c',
+                  "until nslookup backend-service.<prenom>.svc.cluster.local; 
+                  do echo en attente de backend-service; sleep 2; done"]    
+      containers:
+      - name: frontend-container
+        image: fgtech/frontend-todolist:1.0
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 81
+        env:
+        - name: BACK_URL
+          value: "http://_IP_NODE_:_PORT_BACKEND_"
+

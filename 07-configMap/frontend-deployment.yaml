@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend
+  namespace: <prenom>  
+spec:
+  selector:
+    matchLabels:
+      tiers: frontend
+  template:
+    metadata:
+      labels:
+        tiers: frontend
+    spec:
+      containers:
+      - name: front-container
+        image: fgtech/frontend-todolist:1.0
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 81
+        envFrom: # utiliser envFrom pour injecter les clé/valeur en tant que var d'env
+          ###
+

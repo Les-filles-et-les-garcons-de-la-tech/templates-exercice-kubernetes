@@ -1,0 +1,7 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  namespace: <prenom>
+  name: list-pod
+rules:
+  # Définir un Role pour lister les Pods depuis l'API Server

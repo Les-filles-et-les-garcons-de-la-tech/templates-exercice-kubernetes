@@ -4,26 +4,29 @@ metadata:
   name: backend
   namespace: <prenom>  
 spec:
-  replicas: ###                 # A remplir
-  strategy:
-    rollingUpdate:
-      maxSurge: 1
-      maxUnavailable: 1
-    type: RollingUpdate  
+  replicas: 1
   selector:
     matchLabels:
-      tiers: ###                # A remplir
+      tiers: backend
   template:
     metadata:
       labels:
-        tiers: ###              # A remplir
+        tiers: backend
     spec:
       containers:
       - name: webapp-container
         image: fgtech/backend-todolist:1.0
         imagePullPolicy: Always
         ports:
-        - containerPort: ###    # A remplir
+        - containerPort: 80
         env:
           - name: BACKGROUND_COLOR
             value: "#03bef1"
+          - name: DB_ADDRESS
+            value: "mongo"
+          - name: DB_PORT
+            value: "27017"
+          - name: DB_USERNAME
+            value: "root"
+          - name: DB_PASSWORD
+            value: "example"

@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: stress
+  namespace: <prenom>
+  labels:
+    run: stress
+spec:
+  containers:
+  - name: stress
+    image: k8s.gcr.io/hpa-example
+    ports:
+    - containerPort: 80
+    resources:
+      requests:
+        memory: "64Mi"
+        cpu: "200m"
+      limits:
+        memory: "128Mi"
+        cpu: "500m"

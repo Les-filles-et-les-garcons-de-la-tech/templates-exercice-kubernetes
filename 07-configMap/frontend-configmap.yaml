@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: frontend-configmap
+  namespace: <prenom>  
+data:
+  BACK_URL: "http://_IP_NODE_:_PORT_BACKEND_"  # A remplir

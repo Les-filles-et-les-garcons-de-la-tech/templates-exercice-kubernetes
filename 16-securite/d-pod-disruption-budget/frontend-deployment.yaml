@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend
+  namespace: <prenom>  
+spec:
+  selector:
+    matchLabels:
+      tiers: frontend
+      user: <prenom>
+  template:
+    metadata:
+      labels:
+        tiers: frontend
+        user: <prenom>
+    spec:
+      containers:
+      - name: frontend-container
+        image: fgtech/frontend-todolist:1.0
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 81
+        envFrom:
+          - configMapRef:
+              name: frontend-configmap
+

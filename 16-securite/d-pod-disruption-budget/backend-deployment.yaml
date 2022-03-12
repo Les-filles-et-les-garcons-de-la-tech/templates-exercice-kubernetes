@@ -4,26 +4,29 @@ metadata:
   name: backend
   namespace: <prenom>  
 spec:
-  replicas: ###                 # A remplir
+  replicas: 7
   strategy:
     rollingUpdate:
-      maxSurge: 1
-      maxUnavailable: 1
-    type: RollingUpdate  
+      maxSurge: 4
+      maxUnavailable: 4  
   selector:
     matchLabels:
-      tiers: ###                # A remplir
+      tiers: backend
+      user: <prenom>
   template:
     metadata:
       labels:
-        tiers: ###              # A remplir
+        tiers: backend
+        user: <prenom>
     spec:
       containers:
       - name: webapp-container
         image: fgtech/backend-todolist:1.0
         imagePullPolicy: Always
         ports:
-        - containerPort: ###    # A remplir
-        env:
-          - name: BACKGROUND_COLOR
-            value: "#03bef1"
+        - containerPort: 80
+        envFrom:
+        - secretRef:
+            name: backend-secret
+        - configMapRef:
+            name: backend-configmap

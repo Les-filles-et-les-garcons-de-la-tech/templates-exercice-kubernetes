@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: frontend-configmap
+  namespace: <prenom>  
+data:
+  BACK_URL: "http://34.244.179.176:30081"   # A remplir

@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ResourceQuota
+metadata:
+  name: resourcequota-<prenom>
+  namespace: <prenom>
+spec:
+# Adapter aux requis

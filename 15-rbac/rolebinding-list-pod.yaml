@@ -1,0 +1,13 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: list-pod
+  namespace: <prenom>
+subjects:
+- kind: ###                              # A remplir
+  name: ###                              # A remplir
+  namespace: <prenom>
+roleRef:
+  kind: Role # Role ou ClusterRole
+  name: ###                              # A remplir
+  apiGroup: rbac.authorization.k8s.io
