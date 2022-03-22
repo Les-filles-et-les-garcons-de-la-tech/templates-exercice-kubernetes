@@ -2,7 +2,7 @@ apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
   name: db-pvc
-  namespace: <prenom>  
+  namespace: _PRENOM_  
 spec:
   storageClassName: manual
   # Adapter la demande au PV défini

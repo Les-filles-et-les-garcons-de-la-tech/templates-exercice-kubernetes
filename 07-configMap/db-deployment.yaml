@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: mongo-db
-  namespace: <prenom>  
+  namespace: _PRENOM_  
 spec:
   selector:
     matchLabels:

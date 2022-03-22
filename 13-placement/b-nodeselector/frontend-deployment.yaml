@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: frontend
-  namespace: <prenom>  
+  namespace: _PRENOM_  
 spec:
   selector:
     matchLabels:
@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: frontend-container
-        image: fgtech/frontend-todolist:1.0
+        image: fgtech/frontend-todolist:_STUDENT_
         imagePullPolicy: Always
         ports:
         - containerPort: 81

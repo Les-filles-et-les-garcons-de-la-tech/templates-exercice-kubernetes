@@ -2,7 +2,7 @@ apiVersion: autoscaling/v1
 kind: HorizontalPodAutoscaler
 metadata:
  name: hpa-demo-deployment
- namespace: <prenom>
+ namespace: _PRENOM_
 spec:
  scaleTargetRef:
    apiVersion: apps/v1

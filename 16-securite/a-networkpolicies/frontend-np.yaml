@@ -2,6 +2,6 @@ apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
   name: frontend-networkpolicy
-  namespace: <prenom>
+  namespace: _PRENOM_
 spec:
   # A définir au strict minimum

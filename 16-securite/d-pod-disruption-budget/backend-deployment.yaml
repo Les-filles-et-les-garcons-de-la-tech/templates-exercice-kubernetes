@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: backend
-  namespace: <prenom>  
+  namespace: _PRENOM_  
 spec:
   replicas: 7
   strategy:
@@ -12,12 +12,12 @@ spec:
   selector:
     matchLabels:
       tiers: backend
-      user: <prenom>
+      user: _PRENOM_
   template:
     metadata:
       labels:
         tiers: backend
-        user: <prenom>
+        user: _PRENOM_
     spec:
       containers:
       - name: webapp-container

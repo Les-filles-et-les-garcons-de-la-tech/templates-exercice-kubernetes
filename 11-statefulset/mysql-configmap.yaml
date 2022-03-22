@@ -2,7 +2,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: mysql
-  namepsace: <prenom>
+  namepsace: _PRENOM_
   labels:
     app: mysql
 data:

@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: backend
-  namespace: formateur  
+  namespace:   
 spec:
   replicas: 1
   selector:

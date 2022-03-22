@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ResourceQuota
 metadata:
-  name: resourcequota-<prenom>
-  namespace: <prenom>
+  name: resourcequota-_PRENOM_
+  namespace: _PRENOM_
 spec:
 # Adapter aux requis

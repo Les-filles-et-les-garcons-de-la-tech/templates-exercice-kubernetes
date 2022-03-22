@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Pod
 metadata:
   name: liveness-exec
-  namespace: <prenom>
+  namespace: _PRENOM_
 spec:
   containers:
   - name: liveness

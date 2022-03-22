@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: backend
-  namespace: <prenom>
+  namespace: _PRENOM_
 spec:
   replicas: 1
   selector:
