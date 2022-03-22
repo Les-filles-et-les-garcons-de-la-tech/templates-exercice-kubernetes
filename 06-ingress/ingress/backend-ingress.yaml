@@ -10,10 +10,10 @@ spec:
   rules:
   - http:
       paths:
-      - path: ###          # path reconnu par cet ingress
+      - path: /_PRENOM_-back(/|$)(.*)
         pathType: Prefix
         backend:
           service:
-            name: ###      # nom du service cilbé
+            name: backend-service
             port:
-              number: ###  # port du service ciblé
+              number: 80      
