@@ -1,11 +1,14 @@
 #!/bin/bash
 
 # Adresse du server
-# server=_SERVER_ADRESS_
+# server=https://0.0.0.0:34243
+
+# cluster_name=k3d-k3s-default
 serviceaccount=dev-sa
 namespace=_PRENOM_
 
 server=$(kubectl config view -o jsonpath='{.clusters[].cluster.server}')
+# server=$(kubectl config view -o jsonpath='{.clusters[?(@.name=='$cluster_name')].cluster.server}')
 secret=$(kubectl get serviceaccount $serviceaccount  -n $namespace -o jsonpath={.secrets[0].name})
 ca=$(kubectl get secret $secret -n $namespace -o jsonpath='{.data.ca\.crt}')
 token=$(kubectl get secret $secret -o jsonpath='{.data.token}' | base64 --decode)

@@ -15,11 +15,11 @@ spec:
     spec:
       containers:
       - name: frontend-container
-        image: fgtech/frontend-todolist:_STUDENT_
+        image: fgtech/frontend-todolist:stu_NUMBER_
         imagePullPolicy: Always
         ports:
         - containerPort: 81
         env:
         - name: BACK_URL
-          value: "http://_IP_NODE_:_PORT_BACKEND_"
+          value: "http://_IP_NODE_:3010_NUMBER_"
 

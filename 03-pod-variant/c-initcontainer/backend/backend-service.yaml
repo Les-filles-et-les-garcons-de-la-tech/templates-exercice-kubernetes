@@ -10,4 +10,4 @@ spec:
   ports:
   - port: 80
     targetPort: 80
-    nodePort: _PORT_BACKEND_
+    nodePort: 3010_NUMBER_

@@ -2,16 +2,19 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: frontend-ingress
-  namespace: _PRENOM_  
+  namespace: formateur  
+  annotations: 
+  # https://kubernetes.github.io/ingress-nginx/examples/rewrite/#rewrite-target
+    nginx.ingress.kubernetes.io/rewrite-target: /$2
 spec:
-  ingressClassName: nginx  # class de l'ingress controller
+  ingressClassName: nginx
   rules:
   - http:
       paths:
-      - path: /_PRENOM_(/|$)(.*)
+      - path: ###              # path frontend
         pathType: Prefix
         backend:
           service:
-            name: frontend-service
+            name: ###          # Service ciblé
             port:
-              number: 80              
+              number: ###      # Port ciblé du service

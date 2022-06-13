@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: front-container
-        image: fgtech/frontend-todolist:_STUDENT_
+        image: fgtech/frontend-todolist:stu_NUMBER_
         imagePullPolicy: Always
         ports:
         - containerPort: 81

@@ -10,4 +10,4 @@ spec:
   ports:
   - port: ###                # port exposé par le service
     targetPort: ###          # port ciblé du pod
-    nodePort: _PORT_BACKEND_ # port exposé par TOUS les noeuds du cluster
+    nodePort: 3010_NUMBER_ # port exposé par TOUS les noeuds du cluster

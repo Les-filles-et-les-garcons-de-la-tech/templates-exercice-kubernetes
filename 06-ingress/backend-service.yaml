@@ -9,5 +9,5 @@ spec:
     tiers: backend
   ports:
   - port: 80
-    targetPort: 81
+    targetPort: 80
   ###
