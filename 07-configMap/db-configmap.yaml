@@ -4,5 +4,4 @@ metadata:
   name: db-configmap
   namespace: _PRENOM_  
 data:
-  MONGO_INITDB_ROOT_USERNAME: ""  # le même que dans la configmap backend
-  MONGO_INITDB_ROOT_PASSWORD: ""  # le même que dans la configmap backend
+  # username et password

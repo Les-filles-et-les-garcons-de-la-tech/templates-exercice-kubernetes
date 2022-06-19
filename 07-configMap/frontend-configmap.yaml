@@ -4,4 +4,4 @@ metadata:
   name: frontend-configmap
   namespace: _PRENOM_  
 data:
-  BACK_URL: "http://_IP_LB_INGR_CONTR_/_PRENOM_-back"
+  BACK_URL: "https://_IP_LB_INGR_CONTR_/_PRENOM_-back"

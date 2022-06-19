@@ -5,4 +5,7 @@ metadata:
   namespace: _PRENOM_  
 spec:
   storageClassName: manual
+  selector:
+    matchLabels:
+      env: formation    
   # Adapter la demande au PV défini

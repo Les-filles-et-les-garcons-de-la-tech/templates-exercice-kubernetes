@@ -1,3 +1,0 @@
-apiVersion: v1
-kind: PersistentVolumeClaim
-# Adapter à la demande et à la storageClass gp2

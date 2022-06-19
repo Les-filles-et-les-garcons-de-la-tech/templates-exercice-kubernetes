@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: mongo
-  namespace:   
+  namespace: _PRENOM_  
 spec:
   type: ClusterIP
   selector:

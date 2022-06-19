@@ -161,6 +161,7 @@ spec:
   - metadata:
       name: data
     spec:
+      storageClassName: cinder-csi    
       accessModes: ["ReadWriteOnce"]
       resources:
         requests:
