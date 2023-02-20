@@ -7,7 +7,6 @@ Exercices kubernetes de la formation
 Dans TOUT le dossier :
 Avec un éditeur de texte ou le script `replace_variables.sh` à renseigner.
 
-- Remplacer `_PRENOM_` par votre prénom
 - Remplacer `_NUMBER_` par le **nombre** attribué par le formateur (**01**-15).
 - Remplacer `_IP_NODE_` par l'adresse (IP) d'un Node Worker.
 

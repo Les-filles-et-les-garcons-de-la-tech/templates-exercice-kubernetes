@@ -2,7 +2,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: backend-configmap
-  namespace: _PRENOM_  
+  namespace: stu_NUMBER_  
 data:
   BACKGROUND_COLOR: "#"   # chercher colorpicker sur google
   DB_ADDRESS: ""          # A remplir

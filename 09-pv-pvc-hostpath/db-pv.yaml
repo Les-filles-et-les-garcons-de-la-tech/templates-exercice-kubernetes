@@ -1,11 +1,11 @@
 apiVersion: v1
 kind: PersistentVolume
 metadata:
-  name: db-pv-_PRENOM_
+  name: db-pv-stu_NUMBER_
   labels:
     env: formation  
 spec:
   storageClassName: manual
   # Définir capacity: et accessModes:
   hostPath:
-    path: "/tmp/mongo-_PRENOM_"
+    path: "/tmp/mongo-stu_NUMBER_"

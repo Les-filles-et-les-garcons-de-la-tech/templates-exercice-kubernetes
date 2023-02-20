@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: frontend
-  namespace: _PRENOM_  
+  namespace: stu_NUMBER_  
 spec:
   replicas: 1
   selector:

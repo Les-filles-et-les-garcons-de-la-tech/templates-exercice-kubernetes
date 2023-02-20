@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: frontend
-  namespace: _PRENOM_  
+  namespace: stu_NUMBER_  
 spec:
   replicas: 1
   selector:
@@ -21,5 +21,5 @@ spec:
         - containerPort: 81
         env:
         - name: BACK_URL
-          value: "https://_IP_LB_INGR_CONTR_/_PRENOM_-back"
+          value: "https://_IP_LB_INGR_CONTR_/stu_NUMBER_-back"
 

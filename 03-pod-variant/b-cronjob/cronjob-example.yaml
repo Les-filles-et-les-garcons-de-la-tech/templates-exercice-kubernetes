@@ -2,7 +2,7 @@ apiVersion: batch/v1
 kind: CronJob
 metadata:
   name: hello
-  namespace: _PRENOM_  
+  namespace: stu_NUMBER_  
 spec:
   schedule: "* * * * *"
   jobTemplate:

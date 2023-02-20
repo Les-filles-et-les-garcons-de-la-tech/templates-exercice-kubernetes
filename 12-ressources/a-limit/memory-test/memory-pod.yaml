@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Pod
 metadata:
   name: memory-stress
-  namespace: _PRENOM_
+  namespace: stu_NUMBER_
 spec:
   containers:
   - name: memory-stress-ctr

@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: frontend
-  namespace: _PRENOM_ 
+  namespace: stu_NUMBER_ 
 spec:
   replicas: 1
   selector:
@@ -17,7 +17,7 @@ spec:
       - name: init-frontend
         image: busybox:1.28
         command: ['sh', '-c',
-                  "until nslookup backend-service._PRENOM_.svc.cluster.local; 
+                  "until nslookup backend-service.stu_NUMBER_.svc.cluster.local; 
                   do echo en attente de backend-service; sleep 2; done"]    
       containers:
       - name: frontend-container
@@ -27,5 +27,5 @@ spec:
         - containerPort: 81
         env:
         - name: BACK_URL
-          value: "https://_IP_LB_INGR_CONTR_/_PRENOM_-back"
+          value: "https://_IP_LB_INGR_CONTR_/stu_NUMBER_-back"
 

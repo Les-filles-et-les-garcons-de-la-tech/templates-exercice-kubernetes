@@ -5,7 +5,7 @@
 
 # cluster_name=k3d-k3s-default
 serviceaccount=dev-sa
-namespace=_PRENOM_
+namespace=stu_NUMBER_
 
 server=$(kubectl config view -o jsonpath='{.clusters[].cluster.server}')
 # server=$(kubectl config view -o jsonpath='{.clusters[?(@.name=='$cluster_name')].cluster.server}')

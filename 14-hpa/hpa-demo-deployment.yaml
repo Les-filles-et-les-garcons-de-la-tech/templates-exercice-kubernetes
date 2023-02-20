@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
  name: hpa-demo
- namespace: _PRENOM_
+ namespace: stu_NUMBER_
 spec:
  selector:
    matchLabels:

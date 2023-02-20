@@ -2,7 +2,7 @@ apiVersion: batch/v1
 kind: Job
 metadata:
   name: job-demo
-  namespace: _PRENOM_
+  namespace: stu_NUMBER_
 spec:
   template:
     spec:

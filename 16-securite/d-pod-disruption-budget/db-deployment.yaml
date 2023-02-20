@@ -2,17 +2,17 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: mongo-db
-  namespace: _PRENOM_  
+  namespace: stu_NUMBER_  
 spec:
   selector:
     matchLabels:
       tiers: db
-      user: _PRENOM_
+      user: stu_NUMBER_
   template:
     metadata:
       labels:
         tiers: db
-        user: _PRENOM_
+        user: stu_NUMBER_
     spec:
       containers:
       - name: mongo-db

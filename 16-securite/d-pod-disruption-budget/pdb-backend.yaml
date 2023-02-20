@@ -7,4 +7,4 @@ spec:
   selector:
     matchLabels:
       tiers: backend
-      user: _PRENOM_
+      user: stu_NUMBER_

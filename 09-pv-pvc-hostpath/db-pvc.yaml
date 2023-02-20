@@ -2,7 +2,7 @@ apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
   name: db-pvc
-  namespace: _PRENOM_  
+  namespace: stu_NUMBER_  
 spec:
   storageClassName: manual
   selector:

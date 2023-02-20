@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: StatefulSet
 metadata:
   name: mysql
-  namespace: _PRENOM_
+  namespace: stu_NUMBER_
 spec:
   selector:
     matchLabels:
