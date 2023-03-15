@@ -10,9 +10,9 @@ metadata:
     nginx.ingress.kubernetes.io/rewrite-target: /$2
 spec:
   tls:
-    - secretName: ingress-ssl
-      hosts:
-        - _IP_LB_INGR_CONTR_
+    - hosts:
+      - _IP_LB_INGR_CONTR_
+      secretName: letsencrypt 
   ingressClassName: nginx
   rules:
   - host: _IP_LB_INGR_CONTR_  

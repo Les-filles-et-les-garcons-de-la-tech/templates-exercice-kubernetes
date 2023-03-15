@@ -4,4 +4,4 @@ metadata:
   name: frontend-configmap
   namespace: stu_NUMBER_  
 data:
-  BACK_URL: "https://_IP_LB_INGR_CONTR_/stu_NUMBER_-back"   # A remplir
+  BACK_URL: "_PROTOCOLE_://_IP_LB_INGR_CONTR_/stu_NUMBER_-back"   # A remplir

@@ -21,5 +21,5 @@ spec:
         - containerPort: 81
         env:
         - name: BACK_URL
-          value: "http://_IP_NODE_:301_NUMBER_"
+          value: "_PROTOCOLE_://_IP_NODE_:301_NUMBER_"
 

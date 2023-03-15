@@ -4,8 +4,5 @@ metadata:
   name: backend-configmap
   namespace: stu_NUMBER_  
 data:
-  BACKGROUND_COLOR: "#"   # chercher colorpicker sur google
-  DB_ADDRESS: ""          # A remplir
-  DB_PORT: ""             # A remplir
-  DB_USERNAME: ""         # le même que dans la configmap db
-  DB_PASSWORD: ""         # le même que dans la configmap db
+  BACKGROUND_COLOR: "#"   # #16128a bleu foncé /  #03bef1 bleu clair / #d10f2f rouge
+  # Avec la même syntaxe, ajouter les variables d'environnement de connexion à la DB 

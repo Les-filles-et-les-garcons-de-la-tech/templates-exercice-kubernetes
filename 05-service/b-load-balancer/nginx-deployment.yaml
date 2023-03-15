@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx
+  namespace: stu_NUMBER_  
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      tiers: nginx
+  template:
+    metadata:
+      labels:
+        tiers: nginx
+    spec:
+      containers:
+      - name: nginx-container
+        image: nginx:1.23.3
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 80
