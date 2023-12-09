@@ -14,4 +14,4 @@ spec:
       restartPolicy: Never
   backoffLimit: 4 # par défaut 6
   activeDeadlineSeconds: 100
-  ttlSecondsAfterFinished: 100    
+  ttlSecondsAfterFinished: 20    

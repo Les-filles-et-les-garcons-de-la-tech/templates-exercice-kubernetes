@@ -6,20 +6,20 @@ metadata:
   annotations: 
     cert-manager.io/cluster-issuer: letsencrypt-staging
     # kubernetes.io/ingress.class: nginx    
-  # https://kubernetes.github.io/ingress-nginx/examples/rewrite/#rewrite-target
+    # https://kubernetes.github.io/ingress-nginx/examples/rewrite/#rewrite-target
     nginx.ingress.kubernetes.io/rewrite-target: /$2
 spec:
   tls:
     - hosts:
-      - _IP_LB_INGR_CONTR_
+      - _DOMAIN_NAME_
       secretName: letsencrypt 
   ingressClassName: nginx
   rules:
-  - host: _IP_LB_INGR_CONTR_  
+  - host: _DOMAIN_NAME_  
     http:
       paths:
       - path: ###              # path frontend
-        pathType: Prefix
+        pathType: ImplementationSpecific
         backend:
           service:
             name: ###          # Service ciblé
