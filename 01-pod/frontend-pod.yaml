@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: frontend
+  namespace: stu_NUMBER_
+  labels:
+    tiers: front
+spec:
+  containers:
+# S'appuyer sur les infos fournies sur la page:
+# https://hub.docker.com/repository/docker/fgtech/frontend-todolist/general   
+      - name: frontend-container
+        image: fgtech/###:1.0             # A remplir
+        imagePullPolicy: Always
+        ports:
+        - containerPort: ###              # A remplir
+        env:
+        - name: BACK_URL
+          value: "http://localhost:8080"  # Laisser pour port-forward
+

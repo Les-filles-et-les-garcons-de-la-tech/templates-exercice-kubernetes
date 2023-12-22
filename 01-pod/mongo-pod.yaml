@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mongo
+  namespace: stu_NUMBER_
+  labels:
+    tiers: db
+spec:
+  containers:
+# S'appuyer sur les infos fournies sur la page:
+# https://hub.docker.com/_/mongo  
+      - name: mongodb-container
+        image: mongo:7.0.4
+        imagePullPolicy: Always
+        ports:
+        - containerPort: ###        # A trouver sur la doc
+        env:
+          - name: ###               # A trouver sur la doc
+            value: "root"
+          - name: ###               # A trouver sur la doc
+            value: "example"

@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend
+  namespace: stu_NUMBER_  
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      tiers: ###                     # A remplir
+  template:
+    metadata:
+      labels:
+        tiers: ###                   # A remplir
+    spec:
+      containers:
+      - name: frontend-container
+        image: fgtech/frontend-todolist:1.0
+        imagePullPolicy: Always
+        ports:
+        - containerPort: ###         # A remplir
+        env:
+        - name: BACK_URL
+          value: "http://localhost:8080"  # port-forward
+

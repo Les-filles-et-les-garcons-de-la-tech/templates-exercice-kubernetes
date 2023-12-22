@@ -1,17 +1,27 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: mypod
+  name: backend
   namespace: stu_NUMBER_
   labels:
-    name: mypod
+    name: back
 spec:
   containers:
-      - name: webappcontainer
-        image: ###               # A remplir
+# S'appuyer sur les infos fournies sur la page:
+# https://hub.docker.com/repository/docker/fgtech/backend-todolist/general  
+      - name: backend-container
+        image: fgtech/###:1.0               # A remplir
         imagePullPolicy: Always
         ports:
         - containerPort: ###     # A remplir
         env:
+          - name: ###            # A remplir
+            value: "###"
+          - name: DB_ADDRESS
+            value: "xx-xx-xx-xx.stu_NUMBER_.pod.cluster.local"
+          - name: ###            # A remplir
+            value: "###"
+          - name: ###            # A remplir
+            value: "###"
           - name: ###            # A remplir
             value: "###"

@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend
+  namespace: stu_NUMBER_  
+spec:
+  replicas: ###                      # A remplir
+  # Par défaut
+  strategy:
+    type: ###                        # A remplir
+  selector:
+    matchLabels:
+      tiers: ###                     # A remplir
+  template:
+    metadata:
+      labels:
+        tiers: ###                   # A remplir
+    spec:
+      containers:
+      - name: backend-container
+        image: fgtech/backend-todolist:1.0
+        imagePullPolicy: Always
+        ports:
+        - containerPort: ###         # A remplir
+        env:
+          - name: DB_ADDRESS
+            value: "###"             # A remplir
+          - name: DB_PORT
+            value: "27017"
+          - name: DB_USERNAME
+            value: "root"
+          - name: DB_PASSWORD
+            value: "example"
+          - name: BACKGROUND_COLOR
+            value: "#03bef1"
