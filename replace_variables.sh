@@ -13,4 +13,4 @@ find . -type f -name "*.yaml" | xargs sed -i  "s/_EXTERNAL_IP_SVC_BACKEND_/$EXTE
 find . -type f -name "*.yaml" | xargs sed -i  "s/_DOMAIN_NAME_/$DOMAIN_NAME/g;"
 find . -type f -name "*.yaml" | xargs sed -i  "s/_PROTOCOLE_/$PROTOCOLE/g;"
 
-find 15-rbac -type f -name "*.sh" | xargs sed -i  "s/_NUMBER_/$NUMBER/g;"
+find 14-rbac -type f -name "*.sh" | xargs sed -i  "s/_NUMBER_/$NUMBER/g;"
