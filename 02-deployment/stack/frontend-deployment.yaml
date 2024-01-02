@@ -21,5 +21,5 @@ spec:
         - containerPort: ###         # A remplir
         env:
         - name: BACK_URL
-          value: "http://localhost:8080"  # port-forward
+          value: "http://localhost:8080"  # conf pour port-forward
 

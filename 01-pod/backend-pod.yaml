@@ -15,10 +15,10 @@ spec:
         ports:
         - containerPort: ###     # A remplir
         env:
-          - name: ###            # A remplir
-            value: "###"
           - name: DB_ADDRESS
             value: "xx-xx-xx-xx.stu_NUMBER_.pod.cluster.local"
+          - name: ###            # A remplir
+            value: "###"
           - name: ###            # A remplir
             value: "###"
           - name: ###            # A remplir
