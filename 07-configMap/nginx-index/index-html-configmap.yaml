@@ -5,7 +5,7 @@ metadata:
   namespace: stu_NUMBER_
 data:
   index.html: |
+    <html>
     ### A remplir
     ### en respectant cette indentation
-    <html>
     </html
