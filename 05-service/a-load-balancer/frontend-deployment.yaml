@@ -4,13 +4,14 @@ metadata:
   name: frontend
   namespace: stu_NUMBER_  
 spec:
+  replicas: 1
   selector:
     matchLabels:
-      tiers: frontend
+      tiers: ###        # A remplir
   template:
     metadata:
       labels:
-        tiers: frontend
+        tiers: ###      # A remplir
     spec:
       containers:
       - name: frontend-container
@@ -18,7 +19,7 @@ spec:
         imagePullPolicy: Always
         ports:
         - containerPort: 81
-        envFrom:
-          - configMapRef:
-              name: frontend-configmap             
-      # Ajouter la toleration nécessaire
+        env:
+        - name: BACK_URL
+          value: "http://_EXTERNAL_IP_SVC_BACKEND_"
+

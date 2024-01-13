@@ -24,7 +24,7 @@ spec:
         - containerPort: ###         # A remplir
         env:
           - name: DB_ADDRESS
-            value: "10-0-2-14.formateur.pod.cluster.local"    # A Adapter
+            value: "xx-xx-xx-xx.stu_NUMBER_.pod.cluster.local"    # A Adapter
           - name: DB_PORT
             value: "27017"
           - name: DB_USERNAME

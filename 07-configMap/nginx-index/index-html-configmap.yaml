@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: index-html-configmap
+  namespace: stu_NUMBER_
+data:
+  index.html: |
+    ### A remplir
+    ### en respectant cette indentation
+    <html>
+    </html

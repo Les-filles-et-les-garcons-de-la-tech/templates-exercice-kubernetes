@@ -4,10 +4,9 @@ metadata:
   name: backend-service
   namespace: stu_NUMBER_  
 spec:
-  type: NodePort
+  type: ClusterIP
   selector:
     tiers: backend
   ports:
   - port: 80
     targetPort: 80
-    nodePort: 301_NUMBER_

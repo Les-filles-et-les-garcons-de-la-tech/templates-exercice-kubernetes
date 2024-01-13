@@ -22,5 +22,5 @@ spec:
         env:
           - name: BACKGROUND_COLOR
             value: "#03bef1"
-        ### Définir les 3 Types de probes
+        ### Définir les 2 Types de probes
 

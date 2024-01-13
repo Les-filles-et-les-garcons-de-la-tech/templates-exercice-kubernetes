@@ -4,4 +4,4 @@ metadata:
   name: frontend-configmap
   namespace: stu_NUMBER_  
 data:
-  BACK_URL: "_PROTOCOLE_://_DOMAIN_NAME_/stu_NUMBER_-back"
+  BACK_URL: "https://formation.ftech.fr/stu_NUMBER_-back"

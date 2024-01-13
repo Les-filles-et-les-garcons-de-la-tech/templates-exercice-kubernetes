@@ -4,18 +4,17 @@ metadata:
   name: backend-ingress
   namespace: stu_NUMBER_  
   annotations:
-    cert-manager.io/cluster-issuer: letsencrypt-staging
-    # kubernetes.io/ingress.class: nginx    
+    cert-manager.io/cluster-issuer: letsencrypt-staging 
     # https://kubernetes.github.io/ingress-nginx/examples/rewrite/#rewrite-target  
     nginx.ingress.kubernetes.io/rewrite-target: /$2
 spec:
   tls:
     - hosts:
-      - _DOMAIN_NAME_
+      - formation.fgtech.fr
       secretName: letsencrypt 
   ingressClassName: nginx
   rules:
-  - host: _DOMAIN_NAME_ 
+  - host: formation.fgtech.fr 
     http:
       paths:
       - path: ###              # path backend

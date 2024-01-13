@@ -21,5 +21,5 @@ spec:
         - containerPort: 81
         env:
         - name: BACK_URL
-          value: "_PROTOCOLE_://_DOMAIN_NAME_/stu_NUMBER_-back"
+          value: "https://formation.fgtech.fr/stu_NUMBER_-back"
 

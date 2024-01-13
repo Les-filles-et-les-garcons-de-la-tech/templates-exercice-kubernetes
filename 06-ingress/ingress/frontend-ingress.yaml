@@ -11,11 +11,11 @@ metadata:
 spec:
   tls:
     - hosts:
-      - _DOMAIN_NAME_
+      - formation.fgtech.fr
       secretName: letsencrypt 
   ingressClassName: nginx
   rules:
-  - host: _DOMAIN_NAME_  
+  - host: formation.fgtech.fr  
     http:
       paths:
       - path: ###              # path frontend

@@ -21,11 +21,11 @@ spec:
                   do echo en attente de backend-service; sleep 2; done"]    
       containers:
       - name: frontend-container
-        image: fgtech/frontend-todolist:stu_NUMBER_
+        image: fgtech/frontend-todolist:1.0
         imagePullPolicy: Always
         ports:
         - containerPort: 81
         env:
         - name: BACK_URL
-          value: "http://_DOMAIN_NAME_/stu_NUMBER_-back"
+          value: "http://localhost:8080"
 
