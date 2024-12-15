@@ -4,4 +4,4 @@ metadata:
   name: resourcequota-stu_NUMBER_
   namespace: stu_NUMBER_
 spec:
-# Adapter aux requis
+  # Adapter aux requis

@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: backend-service
+  namespace: stu_NUMBER_
+  labels:
+    tiers: backend  
+spec:
+  type: ###                  # A remplir
+  selector:
+    tiers: ###               # A remplir
+  ports:
+  - port: ###                # port exposé par le service
+    targetPort: ###          # port ciblé du pod
+    nodePort: 301_NUMBER_ # port exposé par TOUS les noeuds du cluster

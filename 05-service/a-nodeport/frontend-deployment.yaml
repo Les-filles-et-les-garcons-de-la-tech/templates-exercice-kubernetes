@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: mongo-db
+  name: frontend
   namespace: stu_NUMBER_  
 spec:
   replicas: 1
@@ -14,13 +14,12 @@ spec:
         tiers: ###      # A remplir
     spec:
       containers:
-      - name: mongo-db-container
-        image: mongo:7.0.4
+      - name: frontend-container
+        image: fgtech/frontend-todolist:stu_NUMBER_
+        imagePullPolicy: Always
         ports:
-        - containerPort: 27017
+        - containerPort: 81
         env:
-          - name: MONGO_INITDB_ROOT_USERNAME
-            value: "root"
-          - name: MONGO_INITDB_ROOT_PASSWORD
-            value: "example"
+        - name: BACK_URL
+          value: "_PROTOCOLE_://_IP_NODE_:301_NUMBER_"
 

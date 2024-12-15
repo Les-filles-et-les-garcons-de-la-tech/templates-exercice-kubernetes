@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend
+  namespace: stu_NUMBER_
+  labels:
+    tiers: backend   
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      tiers: ###               # A remplir
+  template:
+    metadata:
+      labels:
+        tiers: ###             # A remplir
+    spec:
+      containers:
+      - name: webapp-container
+        image: fgtech/backend-todolist:1.0
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 80
+        env:
+          - name: BACKGROUND_COLOR
+            value: "#03bef1"
+          - name: DB_ADDRESS
+            value: "mongo"
+          - name: DB_PORT
+            value: "27017"
+          - name: DB_USERNAME
+            value: "root"
+          - name: DB_PASSWORD
+            value: "example"

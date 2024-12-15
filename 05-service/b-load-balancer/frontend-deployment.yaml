@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend
+  namespace: stu_NUMBER_
+  labels:
+    tiers: frontend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      tiers: ###        # A remplir
+  template:
+    metadata:
+      labels:
+        tiers: ###      # A remplir
+    spec:
+      containers:
+      - name: frontend-container
+        image: fgtech/frontend-todolist:1.0
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 81
+        env:
+        - name: BACK_URL
+          value: "http://_EXTERNAL_IP_SVC_BACKEND_"
+
