@@ -8,7 +8,7 @@ metadata:
 spec:
   containers:
 # S'appuyer sur les infos fournies sur la page:
-# https://hub.docker.com/repository/docker/fgtech/backend-todolist/general  
+# https://hub.docker.com/r/fgtech/backend-todolist  
       - name: backend-container
         image: fgtech/###:1.0               # A remplir
         imagePullPolicy: Always
